@@ -1,0 +1,79 @@
+.range-container {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.range-container__range-bar {
+  width: 250px;
+  margin-left: 40px;
+  margin-right: 25px;
+  height: 10px;
+  background-color: #b0a9b629;
+  box-shadow: 0px 0px 5px 1px #c9caca;
+  position: relative;
+  display: inline-block;
+}
+
+.range-container__range-bar__inner-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #e1e1d8;
+}
+
+.range-container__min-value,
+.range-container__max-value {
+  display: inline-block;
+  width: 45px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.range-container__min-value > span,
+.range-container__max-value > span {
+  position: absolute;
+  font-size: 19px;
+  width: fit-content;
+  top: -14px;
+  right: -5px;
+}
+
+.range-container__min-value > input,
+.range-container__max-value > input {
+  position: absolute;
+  width: 50px;
+  top: -13.5px;
+  border: 0;
+  border-radius: 8%;
+  box-shadow: 0 0 10px 2px #d8dee3;
+  padding: 5px;
+}
+
+.range-container__min-value > input:focus,
+.range-container__max-value > input:focus {
+  outline: none;
+  box-shadow: 0 0 12px 5px #d8dee3;
+}
+
+.range-container__range-bar__ball {
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  cursor: grab;
+  background-color: white;
+  box-shadow: 0px 0px 5px 2px #413941ab;
+}
+
+.range-container__range-bar__ball:active {
+  width: 25px !important;
+  height: 25px;
+  top: -7px;
+  cursor: grabbing;
+}
